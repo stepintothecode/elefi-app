@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Contact - EleFi</title>
+<meta name="description" content="Report a bug, suggest a feature or ask a question about EleFi.">
+<meta name="theme-color" content="#100d1c">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="assets/icon.svg" alt="">EleFi</a>
+    <nav class="nav" aria-label="Main">
+      <a href="./#features">Features</a>
+      <a href="./#pricing">Pricing</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="support.html">Help</a>
+    </nav>
+  </div>
+</header>
+
+<main class="doc">
+  <div class="head"><img src="assets/ele.svg" alt=""><div><h1>Contact the developer</h1><p class="updated">A bug, an idea, a question: Ele will pass it on</p></div></div>
+
+  <form id="contact" class="contact-form" novalidate>
+    <label for="type">What is it about?</label>
+    <select id="type" required>
+      <option value="bug">Something isn't working (a bug)</option>
+      <option value="sms">A bank SMS or payment wasn't read right</option>
+      <option value="receipt">A receipt or statement wasn't read right</option>
+      <option value="feature">An idea or a feature request</option>
+      <option value="question">A question</option>
+      <option value="purchase">Buying, refunds or Google Play</option>
+      <option value="other">Something else</option>
+    </select>
+
+    <label for="name">Your name</label>
+    <input id="name" autocomplete="name" required>
+
+    <label for="email">Your email</label>
+    <input id="email" type="email" autocomplete="email" required>
+
+    <label for="phone">Phone <span class="muted">(optional)</span></label>
+    <input id="phone" type="tel" autocomplete="tel">
+
+    <label for="message">Your message</label>
+    <textarea id="message" rows="7" required></textarea>
+    <p id="hint" class="hint"></p>
+
+    <p class="hint">Screenshots or a video help a lot: attach them in your email app after you tap below. Never include full account numbers or OTPs.</p>
+    <p id="problem" class="problem" role="alert"></p>
+    <button class="btn btn-teal" type="submit">&#9993; Write the email</button>
+  </form>
+
+  <p class="hint" style="margin-top:20px;">Or write directly to <a href="mailto:gen0kartikeya@gmail.com">gen0kartikeya@gmail.com</a>.</p>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; 2026 Step Into The Code</span>
+    <nav aria-label="Footer">
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="permissions.html">Permissions</a>
+      <a href="sms.html">SMS and notifications</a>
+      <a href="support.html">Help and support</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+  // No server: the form writes the email, and the reader's own mail app sends it, attachments
+  // and all. Each kind of message asks for what helps most with it.
+  const kinds = {
+    bug: { subject: "Bug", hint: "What did you do, what happened, and what did you expect?", template: "What I did:\n\nWhat happened:\n\nWhat I expected:\n" },
+    sms: { subject: "Message not read", hint: "Which bank or app? Copy the message, but replace the account number and any OTP with XXXX.", template: "Bank or app:\n\nThe message (account number and OTP replaced with XXXX):\n\nWhat EleFi recorded, or didn't:\n" },
+    receipt: { subject: "Receipt or statement", hint: "Which shop or bank, and what was read wrong? Attach the file if you can.", template: "Shop or bank:\n\nWhat was read wrong:\n\nWhat it should have been:\n" },
+    feature: { subject: "Idea", hint: "What would you like EleFi to do, and why would it help you?", template: "My idea:\n\nWhy it would help:\n" },
+    question: { subject: "Question", hint: "Ask away. Ele in the app may know too!", template: "" },
+    purchase: { subject: "Purchase", hint: "Your Google Play order number (GPA.xxxx) helps.", template: "Order number:\n\n" },
+    other: { subject: "Message", hint: "", template: "" },
+  };
+  const params = new URLSearchParams(location.search);
+  const type = document.getElementById("type");
+  const message = document.getElementById("message");
+  const hint = document.getElementById("hint");
+
+  function showKind() {
+    const kind = kinds[type.value];
+    hint.textContent = kind.hint;
+    if (!message.value.trim() || Object.values(kinds).some(k => k.template === message.value)) message.value = kind.template;
+  }
+  type.addEventListener("change", showKind);
+  showKind();
+
+  document.getElementById("contact").addEventListener("submit", e => {
+    e.preventDefault();
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const problem = document.getElementById("problem");
+    if (!name || !email.includes("@") || !message.value.trim()) {
+      problem.textContent = "Please add your name, your email and a message.";
+      return;
+    }
+    problem.textContent = "";
+    const kind = kinds[type.value];
+    const version = params.get("version") ? "EleFi " + params.get("version") : "EleFi";
+    const body = message.value.trim() + "\n\n---\nName: " + name + "\nEmail: " + email + (phone ? "\nPhone: " + phone : "") + "\nApp: " + version + "\nPhone model and Android version: \n";
+    location.href = "mailto:gen0kartikeya@gmail.com?subject=" + encodeURIComponent("[EleFi] " + kind.subject + " from " + name) + "&body=" + encodeURIComponent(body);
+  });
+</script>
+
+</body>
+</html>

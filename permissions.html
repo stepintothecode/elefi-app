@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Permissions - EleFi</title>
+<meta name="description" content="Every Android permission EleFi uses, why, and when it is asked for.">
+<meta name="theme-color" content="#100d1c">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="assets/icon.svg" alt="">EleFi</a>
+    <nav class="nav" aria-label="Main">
+      <a href="./#features">Features</a>
+      <a href="./#pricing">Pricing</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="support.html">Help</a>
+    </nav>
+  </div>
+</header>
+
+<main class="doc">
+  <div class="head"><img src="assets/ele.svg" alt=""><div><h1>Permissions</h1><p class="updated">Every one, and why</p></div></div>
+
+  <p>EleFi asks for a permission only when you use the feature that needs it, and works without any of them.</p>
+
+  <table>
+    <thead><tr><th>Permission</th><th>What for</th><th>When it is asked</th></tr></thead>
+    <tbody>
+      <tr><td><code>RECEIVE_SMS</code></td><td>To record payments from your bank's SMS alerts, on the phone. Messages are never stored. <a href="sms.html">More</a></td><td>Only when you turn on Bank SMS, after EleFi explains it.</td></tr>
+      <tr><td>Notification access</td><td>To record payments from GPay, PhonePe, Paytm, Amazon Pay and CRED notifications. Other apps' notifications are ignored.</td><td>Only when you turn on Payment apps; you grant it in Android's settings.</td></tr>
+      <tr><td><code>POST_NOTIFICATIONS</code></td><td>To tell you a payment was recorded, and to remind you of plans and bills due.</td><td>With Bank SMS or Payment apps, or when you make a plan with a reminder.</td></tr>
+      <tr><td><code>CAMERA</code></td><td>To photograph a receipt. The photo stays on your phone.</td><td>Only when you tap Take a photo.</td></tr>
+      <tr><td><code>RECEIVE_BOOT_COMPLETED</code></td><td>To put plan reminders back after your phone restarts. Nothing else runs at start-up.</td><td>Granted on install; nothing to ask.</td></tr>
+      <tr><td><code>INTERNET</code></td><td>Only to download Smart Ele's language model once, from Hugging Face. None of your data is ever sent.</td><td>Granted on install; nothing to ask.</td></tr>
+      <tr><td><code>ACCESS_NETWORK_STATE</code></td><td>To know when the phone is online, so Smart Ele's download starts only then.</td><td>Granted on install; nothing to ask.</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Not asked for</h2>
+  <ul>
+    <li><strong>Contacts:</strong> picking someone from your contacts uses Android's own contact picker, which hands EleFi only the one contact you choose.</li>
+    <li><strong>Photos and files:</strong> Android's picker hands EleFi only the photo or file you choose.</li>
+    <li><strong>Location, microphone, accounts:</strong> never.</li>
+  </ul>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; 2026 Step Into The Code</span>
+    <nav aria-label="Footer">
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="permissions.html">Permissions</a>
+      <a href="sms.html">SMS and notifications</a>
+      <a href="support.html">Help and support</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>

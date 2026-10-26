@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SMS and notifications - EleFi</title>
+<meta name="description" content="How EleFi reads bank SMS and payment app notifications to record payments, on the phone only, without ever storing the messages.">
+<meta name="theme-color" content="#100d1c">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="assets/icon.svg" alt="">EleFi</a>
+    <nav class="nav" aria-label="Main">
+      <a href="./#features">Features</a>
+      <a href="./#pricing">Pricing</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="support.html">Help</a>
+    </nav>
+  </div>
+</header>
+
+<main class="doc">
+  <div class="head"><img src="assets/ele.svg" alt=""><div><h1>SMS and notifications</h1><p class="updated">How EleFi records your payments by itself</p></div></div>
+
+  <div class="summary">
+    <strong>EleFi is a budgeting and expense tracking app.</strong> Its core feature is recording
+    payments automatically from the transaction alerts banks send by SMS, the only way most Indian
+    banks report each payment as it happens. Everything is read on the phone. Nothing is sent
+    anywhere, and the messages are never stored.
+  </div>
+
+  <h2>Why SMS</h2>
+  <p>When you pay by card, UPI or net banking, your bank sends an SMS: "Rs 349 spent on your HDFC Bank card at SWIGGY". Banks offer no other way for an app on your phone to learn about each payment as it happens. With your permission, EleFi reads these alerts as they arrive and records each one as a transaction, so your spending, balances and budgets stay up to date without typing.</p>
+
+  <h2>What EleFi reads, and what it keeps</h2>
+  <table>
+    <thead><tr><th>EleFi reads</th><th>EleFi keeps</th><th>Never</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>Incoming SMS, checked on the phone against the formats banks and card issuers use for payment alerts.</td>
+        <td>The payment the alert describes: amount, the account's last 4 digits, who was paid, the date. Saved as a transaction marked <strong>Needs Review</strong>, for you to check.</td>
+        <td>The message text is never stored, logged, backed up or exported. Personal messages and one-time passwords are ignored. Nothing is sent off the phone.</td>
+      </tr>
+      <tr>
+        <td>Notifications from GPay, PhonePe, Paytm, Amazon Pay and CRED.</td>
+        <td>The same: the payment, as a transaction marked Needs Review.</td>
+        <td>Every other app's notifications are ignored unread. Notifications are never stored or sent.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Asked only when you turn it on</h2>
+  <ol>
+    <li>In EleFi, open Settings, Automatic capture, and turn on <strong>Bank SMS</strong>.</li>
+    <li>EleFi shows what it will read, what it keeps, and that nothing leaves the phone, with <strong>Not now</strong> and <strong>Allow</strong>.</li>
+    <li>Only after Allow does Android ask for the SMS permission (Android calls it "send and view SMS"; EleFi only receives them, and never sends any). EleFi also asks to show notifications, to tell you each time it records a payment.</li>
+    <li>For payment apps, the same, and Android then opens its notification access list, where you turn on EleFi.</li>
+  </ol>
+  <p>Turn either off any time in the same place, or in Android's settings. EleFi works fully without them: record payments yourself, use Quick capture, or import your bank statement.</p>
+
+  <h2>Permissions used for this</h2>
+  <ul>
+    <li><code>RECEIVE_SMS</code>: to receive each new SMS as it arrives and check whether it is a payment alert. EleFi does not read your existing SMS inbox and cannot send SMS.</li>
+    <li>Notification access (<code>BIND_NOTIFICATION_LISTENER_SERVICE</code>): to read the payment apps' notifications, granted by you in Android's settings.</li>
+    <li><code>POST_NOTIFICATIONS</code>: to tell you when a payment was recorded.</li>
+  </ul>
+  <p>See every permission on the <a href="permissions.html">permissions page</a>, and the full <a href="privacy.html">privacy policy</a>.</p>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; 2026 Step Into The Code</span>
+    <nav aria-label="Footer">
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="permissions.html">Permissions</a>
+      <a href="sms.html">SMS and notifications</a>
+      <a href="support.html">Help and support</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>

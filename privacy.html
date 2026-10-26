@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Privacy policy - EleFi</title>
+<meta name="description" content="EleFi's privacy policy: your data stays on your phone. No account, no server, no analytics, no ads.">
+<meta name="theme-color" content="#100d1c">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="assets/icon.svg" alt="">EleFi</a>
+    <nav class="nav" aria-label="Main">
+      <a href="./#features">Features</a>
+      <a href="./#pricing">Pricing</a>
+      <a href="privacy.html" aria-current="page">Privacy</a>
+      <a href="support.html">Help</a>
+    </nav>
+  </div>
+</header>
+
+<main class="doc">
+  <div class="head"><img src="assets/ele.svg" alt=""><div><h1>Privacy policy</h1><p class="updated">Last updated: 26 October 2026</p></div></div>
+
+  <div class="summary">
+    <strong>In short</strong>
+    <ul>
+      <li>Your money data stays on your phone, in an encrypted database. EleFi has no server and no account.</li>
+      <li>We, the developer, never receive your transactions, messages, receipts or anything else you put in EleFi.</li>
+      <li>No analytics, no advertising, no tracking, no selling or sharing of data.</li>
+      <li>Bank SMS and payment notifications are read on the phone only, to record payments; the messages themselves are never stored.</li>
+    </ul>
+  </div>
+
+  <h2>Who we are</h2>
+  <p>EleFi ("the app") is made by Step Into The Code, an independent developer in India ("we", "us"). For anything about this policy, write to <a href="mailto:gen0kartikeya@gmail.com">gen0kartikeya@gmail.com</a>.</p>
+
+  <h2>What EleFi stores, and where</h2>
+  <p>Everything you record in EleFi is stored only on your phone, in the app's private storage, in a database encrypted with SQLCipher. The key to it is kept in Android's hardware-backed Keystore. Nothing else on your phone can read it, and we cannot either. This includes:</p>
+  <ul>
+    <li>Your Containers (bank accounts, cards, cash, wallets, funds), with only the <strong>last 4 digits</strong> of any account or card number.</li>
+    <li>Your transactions: amounts, dates, who was paid, labels, notes, items, and whether they need review.</li>
+    <li>Receipts you attach: the photo or file, and what EleFi read from it.</li>
+    <li>Plans, goals, contacts you add (a name and, if you choose one from your phone's contacts, that contact's name and number), and labels.</li>
+    <li>Your settings, and the ways of asking that Smart Ele learned from you.</li>
+    <li>A small record of the app's own errors on your phone (the screen and the kind of error, never your data), so Ele can explain a problem. It is never sent anywhere.</li>
+  </ul>
+  <p>Android removes all of it when you uninstall EleFi. You can also delete everything at any time in Settings, Danger, Wipe all data.</p>
+
+  <h2>Bank SMS and payment notifications</h2>
+  <p>If you turn them on (both are off until you do), EleFi reads:</p>
+  <ul>
+    <li><strong>SMS</strong> from banks and card issuers, to record each payment they report;</li>
+    <li><strong>notifications</strong> from GPay, PhonePe, Paytm, Amazon Pay and CRED, for the same purpose.</li>
+  </ul>
+  <p>They are read on your phone only. From a payment alert EleFi keeps only the payment it describes (the amount, the account's last 4 digits, who was paid, the date), recorded as a transaction marked Needs Review. <strong>The message or notification itself is never stored, logged, backed up or sent anywhere.</strong> Personal messages, one-time passwords and every other app's notifications are ignored. More on the <a href="sms.html">SMS and notifications</a> page.</p>
+
+  <h2>Camera, photos and files</h2>
+  <p>When you choose to, EleFi uses the camera to photograph a receipt, or opens a photo, PDF, spreadsheet or document you pick or share to it: a receipt or a bank statement. Text is read from it on the phone, with Google's ML Kit text recognition bundled inside the app, which runs offline; EleFi turns off ML Kit's optional usage reporting. A receipt you attach is kept with its transaction. A statement's rows that you choose to record become transactions.</p>
+
+  <h2>What leaves your phone</h2>
+  <p>Only these, and none of them carries your financial data:</p>
+  <ul>
+    <li><strong>Smart Ele's download.</strong> Once, EleFi downloads a language model (about 123 MB) from Hugging Face, so Ele can understand more ways of asking. It is a plain download of public files: nothing about you or your data is sent. Hugging Face, like any website, sees the request, including your IP address; its privacy policy applies to that. You can delete the model in Settings, Ele.</li>
+    <li><strong>Files you export.</strong> A CSV of your transactions, or a backup file, is created only when you tap Export, and goes wherever you choose in Android's share sheet. These files are <strong>not encrypted</strong>, and the app says so before you export.</li>
+    <li><strong>Links you open.</strong> Our website and YouTube open in your browser; that site's own policy applies.</li>
+  </ul>
+  <p>EleFi does not connect to your bank, does not ask for bank logins, and has no analytics, crash reporting or advertising code.</p>
+
+  <h2>Buying EleFi</h2>
+  <p>EleFi is bought on Google Play. Google handles the payment under its own terms and privacy policy; we never see your card or payment details. Google may share with us anonymous, aggregated sales figures and, if you choose to send them, crash reports and reviews, as it does for every Play app.</p>
+
+  <h2>Sharing and selling</h2>
+  <p>We do not sell, rent or share your data, because we never have it. EleFi has no third-party SDKs for advertising or analytics.</p>
+
+  <h2>Children</h2>
+  <p>EleFi is a personal finance app meant for adults, and is not directed at children under 18.</p>
+
+  <h2>Security</h2>
+  <p>Your database is encrypted on the phone, and Android keeps each app's storage apart from every other app's. Keep your phone locked: anyone who can use your unlocked phone can open the app. You can hide amounts in Settings, and hide EleFi's screen in the recent apps view.</p>
+
+  <h2>Your choices and rights</h2>
+  <ul>
+    <li>Turn SMS reading or notification reading on or off any time in Settings, Automatic capture, or in Android's settings.</li>
+    <li>Export all your data in Settings, Backup and Restore.</li>
+    <li>Delete it in Settings, Danger, or by uninstalling the app.</li>
+  </ul>
+  <p>Since we hold none of your data, there is nothing for us to give you or delete on our side. Under India's Digital Personal Data Protection Act, 2023, and similar laws, you may still write to us with any question.</p>
+
+  <h2>Changes</h2>
+  <p>If this policy changes, the new version is posted here with a new date. If a change would affect how your data is handled, the app will tell you before it applies.</p>
+
+  <h2>Contact</h2>
+  <p>Step Into The Code &middot; <a href="mailto:gen0kartikeya@gmail.com">gen0kartikeya@gmail.com</a></p>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; 2026 Step Into The Code</span>
+    <nav aria-label="Footer">
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="permissions.html">Permissions</a>
+      <a href="sms.html">SMS and notifications</a>
+      <a href="support.html">Help and support</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
