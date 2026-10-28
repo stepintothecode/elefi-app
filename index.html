@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>EleFi - your money, on your phone</title>
-<meta name="description" content="EleFi is a private money tracker for Android. It records your payments from bank SMS and UPI apps by itself, keeps everything encrypted on your phone, and has Ele to answer your questions. One-time purchase. No subscription, no ads, no account.">
+<title>EleFi - the money app that never leaves your phone</title>
+<meta name="description" content="EleFi is a private, offline money tracker for Android. No server, no account, no internet needed. It records your payments from bank SMS and UPI apps by itself, keeps everything encrypted on your phone, and has Ele to answer your questions. One-time purchase. No subscription, no ads.">
 <meta name="theme-color" content="#100d1c">
-<meta property="og:title" content="EleFi - your money, on your phone">
-<meta property="og:description" content="A private money tracker that records your payments by itself and never sends your data anywhere.">
+<meta property="og:title" content="EleFi - the money app that never leaves your phone">
+<meta property="og:description" content="No internet. No server. No problem. A private money tracker that lives on your phone, records your payments by itself and never sends your data anywhere.">
 <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,20 +24,31 @@
       <a href="#pricing">Pricing</a>
       <a href="privacy.html">Privacy</a>
       <a href="support.html">Help</a>
+      <a class="get" href="https://play.google.com/store/apps/details?id=com.stepintothecode.elefi">Get EleFi</a>
     </nav>
   </div>
 </header>
 
 <main>
-  <section class="hero">
+  <section class="hero hero-center">
     <div class="wrap">
+      <div class="hello">
+        <div class="bubble">Namaste! <span class="wave">&#128075;</span> I'm Ele.<br>I keep your money on your phone, and I never phone home.</div>
+        <img class="ele" src="assets/ele.svg" alt="Ele, EleFi's elephant">
+      </div>
+
       <div>
-        <span class="eyebrow">&#128274; Private by design &middot; Made in India</span>
-        <h1>Your money,<br>on your phone.<br><span class="soft">Nowhere else.</span></h1>
+        <h1>No internet.<br>No server.<br><span class="soft">No problem.</span></h1>
+        <ul class="trust" aria-label="What EleFi promises">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="3"/><path d="M11 18h2"/></svg>On your phone</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 8.8a15 15 0 0 1 4.2-2.6M9.3 5.2A15 15 0 0 1 22 8.8M5 12.5a10 10 0 0 1 4-2.2M15.3 10.6A10 10 0 0 1 19 12.5M8.5 16a5 5 0 0 1 7 0"/><path d="M12 20h.01"/><path d="M3 3l18 18"/></svg>Works offline</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="11" rx="2.5"/><path d="M8 10.5V7a4 4 0 0 1 8 0v3.5"/></svg>Private and encrypted</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4.5 21a7.5 7.5 0 0 1 11.7-6.2"/><path d="M17 16l4 4M21 16l-4 4"/></svg>No account</li>
+        </ul>
         <p class="lede">
-          EleFi records your payments by itself from bank SMS and UPI apps, keeps every rupee in an
-          encrypted database on your phone, and has Ele, a friendly elephant, to answer what you
-          spent, where, and why.
+          EleFi is a money tracker that lives entirely on your phone. It records your payments by
+          itself from bank SMS and UPI apps, keeps every rupee encrypted on the device, and has Ele
+          to answer what you spent. It needs no connection, and it has nowhere to send your data.
         </p>
         <div class="cta">
           <a class="btn btn-teal" href="https://play.google.com/store/apps/details?id=com.stepintothecode.elefi">Get EleFi</a>
@@ -47,20 +58,22 @@
         </div>
         <p class="price-note">One-time purchase: <s>&#8377;2,500</s> <b>&#8377;500 for early users</b></p>
       </div>
-
-      <div class="hello">
-        <div class="bubble">Namaste! <span class="wave">&#128075;</span> I'm Ele.<br>I'll keep your money tidy, right here on your phone.</div>
-        <img class="ele" src="assets/ele.svg" alt="Ele, EleFi's elephant">
-      </div>
     </div>
   </section>
 
-  <section>
-    <div class="wrap promise">
-      <div><span class="emoji">&#128241;</span><b>On your phone</b><span>Encrypted. Never uploaded. EleFi has no server.</span></div>
-      <div><span class="emoji">&#9889;</span><b>Records itself</b><span>From bank SMS, GPay, PhonePe, Paytm, Amazon Pay and CRED.</span></div>
-      <div><span class="emoji">&#127881;</span><b>Bought once</b><span>No subscription, no ads, no in-app purchases.</span></div>
-      <div><span class="emoji">&#128065;</span><b>Nothing hidden</b><span>Every permission explained, in plain words.</span></div>
+  <section id="promise">
+    <div class="wrap">
+      <div class="center">
+        <h2>Ele's promise</h2>
+        <p class="sub">Most money apps keep your data on their servers. EleFi doesn't have one.</p>
+      </div>
+      <div class="says-list">
+        <div class="says"><img src="assets/ele.svg" alt=""><div class="b">No server. No account.<small>There's nowhere for your money to be sent, so it never is. No sign-up, no password, no bank login.</small></div></div>
+        <div class="says right"><img src="assets/ele.svg" alt=""><div class="b">I work offline.<small>Everything I know is on your phone, so recording a payment, answering a question or showing a balance needs no signal.</small></div></div>
+        <div class="says"><img src="assets/ele.svg" alt=""><div class="b">Nobody sees your money. Not even us.<small>It's encrypted on your phone. No analytics, no ads, no tracking.</small></div></div>
+        <div class="says right"><img src="assets/ele.svg" alt=""><div class="b">I read your bank SMS for you.<small>Right here on the phone, and I never keep the message.</small></div></div>
+      </div>
+      <p class="says-more"><a href="permissions.html">Every permission EleFi asks for, and why</a></p>
     </div>
   </section>
 
@@ -147,6 +160,7 @@
     <div class="wrap" style="max-width:820px;">
       <h2 class="center">Questions</h2>
       <details><summary>Does EleFi upload my data anywhere?</summary><p>No. EleFi has no server and no account. Your data lives in an encrypted database on your phone. It leaves only when you export a backup file yourself. See the <a href="privacy.html">privacy policy</a>.</p></details>
+      <details><summary>Does EleFi need the internet?</summary><p>No. Recording payments, reading receipts and statements, answering your questions and showing balances all work with no connection. The only time EleFi goes online is to download Smart Ele's language model once: a plain download of public files, with nothing about you sent. See <a href="privacy.html">privacy</a>.</p></details>
       <details><summary>Why does EleFi want to read SMS?</summary><p>To record your payments by themselves from your bank's alerts. Only payment alerts are used, on the phone; the message itself is never stored, and OTPs and personal messages are ignored. It's off until you turn it on. See <a href="sms.html">SMS and notifications</a>.</p></details>
       <details><summary>Does it connect to my bank?</summary><p>No. EleFi never asks for bank logins. It reads the alerts and statements you already get.</p></details>
       <details><summary>What happens if I change phones?</summary><p>Export a backup from Settings, Backup and Restore, and restore it on the new phone. The file holds everything.</p></details>
@@ -157,6 +171,7 @@
 
 <footer>
   <div class="wrap">
+    <div class="stays"><img src="assets/ele.svg" alt=""><div><b>Made to stay on your phone</b><span>No server, no account, no internet needed. Your money never leaves your hands.</span></div></div>
     <span>&copy; 2026 Step Into The Code. Google Play and the Google Play logo are trademarks of Google LLC.</span>
     <nav aria-label="Footer">
       <a href="privacy.html">Privacy</a>
