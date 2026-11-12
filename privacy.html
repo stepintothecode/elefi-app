@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Privacy policy - EleFi</title>
-<meta name="description" content="EleFi's privacy policy: your data stays on your phone. No account, no server, no analytics, no ads.">
+<meta name="description" content="EleFi's privacy policy: your data stays on your phone. No server, no analytics, no ads. Google sign-in is optional, only for an encrypted backup to your own Drive.">
 <meta name="theme-color" content="#100d1c">
 <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap">
@@ -26,13 +26,14 @@
 </header>
 
 <main class="doc">
-  <div class="head"><img src="assets/ele.svg" alt=""><div><h1>Privacy policy</h1><p class="updated">Last updated: 26 October 2026</p></div></div>
+  <div class="head"><img src="assets/ele.svg" alt=""><div><h1>Privacy policy</h1><p class="updated">Last updated: 12 November 2026</p></div></div>
   <p class="ele-line">Everything stays on your phone. There's no server for it to go to, not even ours.</p>
 
   <div class="summary">
     <strong>In short</strong>
     <ul>
-      <li>Your money data stays on your phone, in an encrypted database. EleFi has no server and no account.</li>
+      <li>Your money data stays on your phone, in an encrypted database. EleFi has no server and no EleFi account.</li>
+      <li>Signing in with Google is optional. It is used only to keep an encrypted backup in your own Google Drive, in a folder only EleFi can see. We never receive it, and cannot read it.</li>
       <li>We, the developer, never receive your transactions, messages, receipts or anything else you put in EleFi.</li>
       <li>No analytics, no advertising, no tracking, no selling or sharing of data.</li>
       <li>Bank SMS and payment notifications are read on the phone only, to record payments; the messages themselves are never stored.</li>
@@ -65,9 +66,19 @@
   <h2>Camera, photos and files</h2>
   <p>When you choose to, EleFi uses the camera to photograph a receipt, or opens a photo, PDF, spreadsheet or document you pick or share to it: a receipt or a bank statement. Text is read from it on the phone, with Google's ML Kit text recognition bundled inside the app, which runs offline; EleFi turns off ML Kit's optional usage reporting. A receipt you attach is kept with its transaction. A statement's rows that you choose to record become transactions.</p>
 
-  <h2>What leaves your phone</h2>
-  <p>Only these, and none of them carries your financial data:</p>
+  <h2>Google sign-in and the Drive backup</h2>
+  <p>You can sign in with your Google account, in the account sheet on Home. It is optional, and everything else in EleFi works without it. EleFi asks Google for one permission only: its own hidden app folder in your Google Drive (the <code>drive.appdata</code> scope). It cannot see, open or change any other file in your Drive.</p>
   <ul>
+    <li><strong>What EleFi reads from Google:</strong> your name, your email address and Drive's identifier for you, from your Drive's own account details. They are kept on your phone, to show who is signed in and to keep one Google account to one set of money on the phone.</li>
+    <li><strong>What EleFi writes to your Drive:</strong> a backup of your EleFi data, encrypted on your phone before it leaves, with a key that stays on your phone and with you. It goes straight from your phone to your own Drive. There is no server of ours in between, and we cannot read it.</li>
+    <li><strong>Signing out</strong> in EleFi keeps your money on the phone and stops its backups from that phone. To take back EleFi's access to your Drive completely, remove EleFi in your Google Account, under Security, Third-party apps and services.</li>
+  </ul>
+  <p>EleFi's use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements. That information is used only to sign you in and to keep your backup in your own Drive. It is never used for advertising, never sold, never shared with anyone, and never read by people.</p>
+
+  <h2>What leaves your phone</h2>
+  <p>Only these. The first is your own data, encrypted; none of the others carries your financial data:</p>
+  <ul>
+    <li><strong>Your encrypted Drive backup</strong>, if you sign in with Google: to your own Drive's app folder only, as above. Google's privacy policy applies to your Google account and Drive.</li>
     <li><strong>Smart Ele's download.</strong> Once, EleFi downloads a language model (about 123 MB) from Hugging Face, so Ele can understand more ways of asking. It is a plain download of public files: nothing about you or your data is sent. Hugging Face, like any website, sees the request, including your IP address; its privacy policy applies to that. You can delete the model in Settings, Ele.</li>
     <li><strong>Files you export.</strong> A CSV of your transactions, or a backup file, is created only when you tap Export, and goes wherever you choose in Android's share sheet. These files are <strong>not encrypted</strong>, and the app says so before you export.</li>
     <li><strong>Links you open.</strong> Our website and YouTube open in your browser; that site's own policy applies.</li>
@@ -90,6 +101,7 @@
   <ul>
     <li>Turn SMS reading or notification reading on or off any time in Settings, Automatic capture, or in Android's settings.</li>
     <li>Export all your data in Settings, Backup and Restore.</li>
+    <li>Sign in with Google, or out, in the account sheet on Home; remove EleFi's access to your Drive in your Google Account.</li>
     <li>Delete it in Settings, Danger, or by uninstalling the app.</li>
   </ul>
   <p>Since we hold none of your data, there is nothing for us to give you or delete on our side. Under India's Digital Personal Data Protection Act, 2023, and similar laws, you may still write to us with any question.</p>
